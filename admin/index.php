@@ -1,14 +1,38 @@
 <?php
-session_start();
-// var_dump($_SESSION['id']);
-if(!isset($_SESSION["id"])) {
-    header("Location: login.php");
-    exit;
-   
-   
- }
+include 'db/koneksi.php'
 
+$perawat_query = "
+    SELECT u.username, u.nama, un.nama_unit,
+        IF(u.jenis_kelamin='l', 'Laki-laki', 'Perempuan') AS jenis_kelamin,
+        u.alamat 
+    FROM users u
+    JOIN roles r ON u.role_id = r.id
+    JOIN unit_user uu ON uu.user_id = u.id
+    JOIN units un ON uu.unit_id = un.id 
+    WHERE r.role_name = 'perawat'
+";
+$perawat_stmt = $conn->prepare($perawat_query);
+$perawat_stmt->execute();
+$perawat_results = $perawat_stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$unit_count_query = "SELECT COUNT(*) AS total_unit FROM units";
+$unit_count_stmt = $conn->prepare($unit_count_query);
+$unit_count_stmt->execute();
+$unit_count_result = $unit_count_stmt->fetch(PDO::FETCH_NUM);
+
+$perawat_query = "
+    SELECT COUNT(*) AS total_perawat FROM users
+    JOIN roles ON users.role_id=roles.id
+    WHERE roles.role_name='perawat'
+";
+$perawat_count_stmt = $conn->prepare($perawat_count_query);
+$perawat_count_stmt->execute();
+$perawat_count_result = $perawat_count_stmt->fetch(PDO::FETCH_NUM);
+
+$user_query = "SELECT COUNT(*) AS total_users FROM users";
+$user_count_stmt = $conn->prepare($user_count_query);
+$user_count_stmt->execute();
+$user_count_result = $user_count_stmt->fetch(PDO::FETCH_NUM);
 ?>
 <!DOCTYPE html>
 <html lang="en">
