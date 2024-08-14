@@ -1,0 +1,193 @@
+#margin{
+    margin-top: 100px;
+}
+#tablewraapper{
+    margin-top: 100px;
+}
+ 
+.jumbotron{
+            
+     
+    margin: 30px auto ;
+    /* border : 1px solid #03c0da ; */
+    width: 1200px ; 
+}
+.container1{
+
+width: 1141px ;
+margin: 30px auto ;
+/* border : 1px solid blue ; */
+padding : 5px;
+box-sizing:boder-box;
+display: flex ;
+}
+.container1 .satu{
+margin-right: 150px;
+}
+button.terminal{
+background-color: rgb(214, 194, 16);
+margin-bottom: 2px !important;
+padding: 3px;
+width: 70px;
+height: 40px;
+border-top-left-radius: 6px; /* Radius sudut atas kiri */
+border-top-right-radius: 6px; /* Radius sudut atas kanan */
+border-bottom-left-radius: 6px; /* Radius sudut bawah kiri */
+border-bottom-right-radius: 6px; /* Radius sudut bawah kanan */
+
+
+}
+.satu{
+width:300px;
+height:40px;
+ 
+ 
+
+margin : 4px ;
+}
+.dua{
+width:300px;
+height:40px;
+ 
+
+margin : 4px ;
+
+}
+.tiga{
+width:300px;
+height:40px;
+ 
+margin-left: 10px;
+margin : 4px ;
+}
+.container1 .tiga{
+    margin-left: 55px;
+}
+div .teer{
+margin-top: 0px;
+}
+select.selectterminal {
+margin-top: 3px;
+margin-left: 100px;
+padding: 5px;
+width: 200px;
+height: 30px;
+border-top-left-radius: 3px; /* Radius sudut atas kiri */
+border-top-right-radius: 3px; /* Radius sudut atas kanan */
+border-bottom-left-radius: 3px; /* Radius sudut bawah kiri */
+border-bottom-right-radius: 3px; /* Radius sudut bawah kanan */
+
+}
+ 
+.satu h6{ 
+
+     
+    font-family: "Karla", Sans-serif;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+#tabel th{
+    font-size: 11px;
+    background-color: orange;
+    text-align: center;
+    font-family: "Karla", Sans-serif;
+}
+#tabel tr{
+    font-size: 11px;
+    font-family: "Karla", Sans-serif;
+}
+h1{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    color: aqua;
+   
+}
+label   {
+    font-size: 14px;
+    font-family: "Karla", Sans-serif;
+}
+option {
+    font-size: 12px;
+    font-family: "Karla", Sans-serif;
+}
+.dua{
+    
+    font-size: 12px;
+}
+input{
+    margin-top: 3px;
+    font-size: 14px;
+    font-family: "Karla", Sans-serif;
+    padding: 5px;
+    width: 200px;
+    height: 30px;
+    border-top-left-radius: 3px; /* Radius sudut atas kiri */
+    border-top-right-radius: 3px; /* Radius sudut atas kanan */
+    border-bottom-left-radius: 3px; /* Radius sudut bawah kiri */
+    border-bottom-right-radius: 3px; /* Radius sudut bawah kanan */
+
+
+}
+#cari{
+    font-size: 10px;
+    font-family: "Karla", Sans-serif;
+    height: 30px;
+    width: 70px;
+    color: white; /* Warna teks placeholder */
+    font-style: italic; /* Gaya font teks placeholder */
+    font-size: 12px;
+    font-family: "Karla", Sans-serif;
+    background-color: rgb(14, 14, 218);
+    border : 0px solid white ;
+    margin-bottom: 10px;
+    
+ 
+
+    border-top-left-radius: 3px; /* Radius sudut atas kiri */
+    border-top-right-radius: 3px; /* Radius sudut atas kanan */
+    border-bottom-left-radius: 3px; /* Radius sudut bawah kiri */
+    border-bottom-right-radius: 3px; /* Radius sudut bawah kanan */
+ 
+
+}
+::placeholder {
+    color: #999; /* Warna teks placeholder */
+    font-style: italic; /* Gaya font teks placeholder */
+    font-size: 12px;
+    font-family: "Karla", Sans-serif;
+    padding-bottom : 5px;
+
+}
+
+select.selectPage {
+    font-family: "Karla", Sans-serif;
+     
+    padding: 5px;
+    width: auto;
+    height: 27px;
+    font-size: 12px;
+    border-top-left-radius: 3px; /* Radius sudut atas kiri */
+    border-top-right-radius: 3px; /* Radius sudut atas kanan */
+    border-bottom-left-radius: 3px; /* Radius sudut bawah kiri */
+    border-bottom-right-radius: 3px; /* Radius sudut bawah kanan */
+    
+    }
+
+    input.form-control{
+        font-size: 12px;
+        font-family: "Karla", Sans-serif;
+        font-style: italic;
+
+    }
+    .pesanSalah{
+        color: red;
+        font-style: italic;
+        font-size: 12px ;
+        font-family:Verdana, Geneva, Tahoma, sans-serif ;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+ .pagenation {
+    border: 1px salmon;
+ }
