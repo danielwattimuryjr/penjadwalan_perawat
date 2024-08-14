@@ -1,6 +1,48 @@
 <?php
 include './db/conn.php';
 $role = $_SESSION['user']['role_name'];
+
+$menus = [
+  "admin" => [
+    "Unit" => "?halaman=unit",
+    "User" => "?halaman=user",
+    "Perawat" => "?halaman=perawat",
+    "Jadwal Dokter" => "?halaman=jadwal_dokter",
+    "Jadwal Shift" => "?halaman=jadwal_shift",
+  ],
+  "kepala_unit" => [
+    "Kebutuhan Shift" => "?halaman=kebutuhan_shift",
+    "Constraint" => "?halaman=constraint",
+    "Permohonan Jadwal" => "?halaman=permohonan_jadwal",
+    "Perawat" => "?halaman=perawat",
+    "Jadwal Dokter" => "?halaman=jadwal_dokter",
+    "Jadwal Shift" => "?halaman=jadwal_shift",
+  ],
+  "ketua_tim" => [
+    "Kebutuhan Shift" => "?halaman=kebutuhan_shift",
+    "Constraint" => "?halaman=constraint",
+    "Permohonan Jadwal" => "?halaman=permohonan_jadwal",
+    "Jadwal Dokter" => "?halaman=jadwal_dokter",
+    "Perawat" => "?halaman=perawat",
+    "Jadwal Shift" => "?halaman=jadwal_shift",
+  ],
+  "perawat" => [
+    "Permohonan Jadwal" => "?halaman=permohonan_jadwal",
+    "Jadwal Dokter" => "?halaman=jadwal_dokter",
+    "Perawat" => "?halaman=perawat",
+    "Jadwal Shift" => "?halaman=jadwal_shift",
+  ]
+];
+
+$common_menus = [
+  "Logout" => "?halaman=logout"
+];
+
+if (isset($menus[$role])) {
+  $menus_to_show = array_merge($menus[$role], $common_menus);
+} else {
+  $menus_to_show = $common_menus;
+}
 ?>
 
 <nav class="col-md-3 col-lg-2 d-md-block  sidebar">
@@ -13,30 +55,12 @@ $role = $_SESSION['user']['role_name'];
       <li class="nav-item">
         <a class="nav-link active" href="?halaman=dashboard">Beranda</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=perawat">Unit</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=perawat">Perawat</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=perawat">Jadwal Dokter</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=perawat">Jadwal Shift</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=perawat">Kebutuhan Shift</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=perawat">Constraint</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=perawat">Pengguna</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?halaman=logout">Logout</a>
-      </li>
+
+      <?php
+      foreach ($menus_to_show as $menu_name => $menu_link) {
+        echo "<li class='nav-item'><a class='nav-link' href='$menu_link'>$menu_name</a></li>";
+      }
+      ?>
     </ul>
   </div>
 </nav>
