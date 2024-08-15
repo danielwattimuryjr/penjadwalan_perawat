@@ -70,32 +70,32 @@ $fetch_unit_results = $fetch_unit_stmt->get_result()->fetch_all(MYSQLI_ASSOC);
                                     <th>Nama</th>
                                     <th>Keterangan</th>
                                     <th>Tanggal</th>
-                                    <th>Waktu</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-    <tr>
-        <td>1</td>
-        <td>Siang</td>
-        <td>Makana</td>
-        <td>2024-08-15</td>
-        <td>09:00</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Petang</td>
-        <td>Rapat</td>
-        <td>2024-08-15</td>
-        <td>14:00</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Malam</td>
-        <td>Acara</td>
-        <td>2024-08-15</td>
-        <td>19:00</td>
-    </tr>
-</tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Siang</td>
+                                    <td>Makana</td>
+                                    <td>2024-08-15</td>
+                                    <td>09:00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Petang</td>
+                                    <td>Rapat</td>
+                                    <td>2024-08-15</td>
+                                    <td>14:00</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Malam</td>
+                                    <td>Acara</td>
+                                    <td>2024-08-15</td>
+                                    <td>19:00</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
